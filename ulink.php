@@ -1,9 +1,10 @@
 <?php
 /*
 Plugin Name: ulink
-Description: Use custom made urls as easy as include them in an array! It shouldn't be hard to make custom urls! Activate the plugin, don't forget to turn on permalinks and then go to your-blog-url.com/hello_world
-Plugin URI:  https://mazernet.com/
+Description: Create a custom url in wordpress which when visited asscess an API to list users  eg.yourdomain.com/{custom link}
+Plugin URI:  https://github.com/yawshadi/ulink/
 Author:      shadrach Amponsah
+Author URI: https://www.linkedin.com/in/shadrach-amponsah-6180b2a6/
 Version:     1.0
 License:     GPLv2 or later
 
