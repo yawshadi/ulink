@@ -1,29 +1,32 @@
 <?php
+/* ulink url class to access the APi and return the results
+ */
+class UlinkUrl extends Init
+{
 
-// exit if file is called directly
-if ( ! defined( 'ABSPATH' ) ) {
+    public static $url = 'https://jsonplaceholder.typicode.com/users'; // API URL
 
-	exit;
+    public static function fetch()
+    {
+        $request = wp_remote_get(self::$url, $options = array()); // Fetching using WP remote API
 
+        return $request;
+    }
+
+    public static function load_request()
+    {
+        $request = self::fetch();
+        try {
+            $data = json_decode($request['body']);
+        } catch (Exception $ex) {
+            $data = null;
+        }
+        return $data;
+    }
 }
 
-$url = 'https://jsonplaceholder.typicode.com/users';
+$data = UlinkUrl::load_request(); //Retrieving the data from the class
 
-$request = wp_remote_get($url, $options=array());
+$plugin_dir_path = plugin_dir_url(dirname(__FILE__)) . '/ulink/';
 
- 
-function load_request($response) {
-  try {
-    $json = json_decode( $response['body'] );
-  } catch ( Exception $ex ) {
-    $json = null;
-  }
-  return $json;
-}
-
- $data = load_request($request);
- $plugin_dir_path = plugin_dir_url( dirname( __FILE__ ) ).'/ulink/';
-
- require_once plugin_dir_path( __FILE__ ) . 'includes/html.php';
-
-?>
+require_once plugin_dir_path(__FILE__) . 'includes/html.php';  // including the Html page

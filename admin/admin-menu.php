@@ -1,25 +1,26 @@
 <?php
+/* 
+author : shadrach
+description : creating admin top-level menu
+*/
 // admin top level menu
-
-// exit if file is called directly
-if ( ! defined( 'ABSPATH' ) ) {
-
-	exit;
-
-}
+class AdminMenu extends Init
+{
 
 // add top-level administrative menu
-function ulink_add_toplevel_menu() {
-	
-	add_menu_page(
-		'ulink Settings',
-		'ulink',
-		'manage_options',
-		'ulink',
-		'ulink_display_settings_page',
-		'dashicons-admin-generic',
-		null
-	);
-	
+    public static function ulink_add_toplevel_menu()
+    {
+
+        add_menu_page(
+            'ulink Settings',
+            'ulink',
+            'manage_options',
+            'ulink',
+            array('AdminSettings','ulink_display_settings_page'),
+            'dashicons-admin-generic',
+            null
+        );
+
+    }
 }
-add_action( 'admin_menu', 'ulink_add_toplevel_menu' );
+add_action('admin_menu', array('AdminMenu', 'ulink_add_toplevel_menu'));

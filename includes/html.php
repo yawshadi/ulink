@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
-    <title><?= ulink_custom_url()?></title>
+    <title><?= Ulink::ulink_custom_url()?></title>
     <!-- Bootstrap core CSS -->
     <link href="<?=$plugin_dir_path ?>vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?=$plugin_dir_path ?>public/css/server.css" rel="stylesheet">
@@ -17,7 +17,7 @@
   <body>
 
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand" href="#"><?= ulink_custom_url()?></a>
+      <a class="navbar-brand" href="#"><?= Ulink::ulink_custom_url()?></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -27,7 +27,7 @@
 	  <div class="row" >
 
 		<div class="col-md-8">
-		<h2>Welcome to <?= ulink_custom_url()?></h2>
+		<h2>Welcome to <?= Ulink::ulink_custom_url()?></h2>
 		<p>Random generated Users</p>            
 		<table class="table table-bordered table-striped">
 			<thead>

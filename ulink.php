@@ -30,8 +30,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 }
 
-add_filter('generate_rewrite_rules', 'ulink_flush_rules');
-add_action('template_redirect', 'ulink_redirect');
+require_once plugin_dir_path( __FILE__ ) . 'class.init.php';
+require_once plugin_dir_path( __FILE__ ) . 'class.ulink.php';
+
+add_filter('generate_rewrite_rules', array( 'Ulink', 'ulink_flush_rules' ));
+add_action('template_redirect', array( 'Ulink', 'ulink_redirect' ));
 
 
 // if admin area
@@ -42,61 +45,4 @@ if ( is_admin() ) {
 	require_once plugin_dir_path( __FILE__ ) . 'admin/admin-settings.php';
 	require_once plugin_dir_path( __FILE__ ) . 'admin/admin-settings-register.php';
 	require_once plugin_dir_path( __FILE__ ) . 'admin/admin-settings-callback.php';
-	require_once plugin_dir_path( __FILE__ ) . 'admin/admin-settings-validate.php';
-
-}
-
-// default plugin options
-function ulink_options_default() {
-
-	return array(
-		'custom_url'     => 'ulink',
-	);
-
-}
-
-function ulink_custom_url() {
-	
-	$options = get_option( 'ulink_options', ulink_options_default() );
-	
-	if ( isset( $options['custom_url'] ) && ! empty( $options['custom_url'] ) ) {
-		
-		$url =  $options['custom_url'] ;
-		
-	}
-	
-	return $url;
-	
-}
-
-
-
-function ulink_flush_rules() {    
-  // Dont do anything in admin!
-  if (is_admin()) return;
-  global $wp_rewrite;
-  $wp_rewrite->flush_rules();
-}       
-
-function ulink_redirect() {
-  global $wp;
- 
-    $ulink_urls = array(
-      "".ulink_custom_url()."" => plugin_dir_path(__FILE__) . "/ulink_url.php",
-    );
-  
-  
-  // Check for matches in the array
-  if (isset($ulink_urls[$wp->request])) {  
-    $file = $ulink_urls[$wp->request];
-    
-    // Check if the file exists for real...
-    if (is_file($file)) {
-      // Set HTTP response
-      header('HTTP/1.1 200 OK');
-      // Include the file
-      require $file;
-      exit;
-    }
-  }
 }
