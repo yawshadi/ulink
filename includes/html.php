@@ -58,8 +58,15 @@
 		<div class="card">
 			<img src="<?=$plugin_dir_path ?>/public/person.png" alt="Avatar" style="width:100%">
 			<div class="container" id='loading'>
-				<h4><b id='noname'>No Name</b></h4> 
-				<p id='bio'>Architect & Engineer</p> 
+				<h4><b id='noname'>Name</b></h4> 
+				<li>company : <span id='cm'></span></li>
+				<li>email : <span id='em'></span></li>
+				<li>phone <span id='ph'></span></li>
+				<hr> 
+				<li>street : <span id='st'></span></li>
+				<li>suite : <span id='su'></span></li>
+				<li>city <span id='city'></span></li>
+
 			</div>
 			</div>
 		</div>

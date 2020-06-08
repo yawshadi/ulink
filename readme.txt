@@ -31,7 +31,7 @@ This section describes how to install the plugin and get it working.
 3. Run composer install in the directory of the clonned repository 
 4. Log in to WordPress as an administrator
 5. Activate the plugin via the Plugins screen
-6. Visit  ulink settings from the side menu to set your preferred url name to use
+6. Visit  ulink settings from the side menu to set your preferred url name to use say:firsturl or you can use the default name {ulink}
 7. Navigate to the url you chose say yourdomain.com/{your-chosen-url} and voila ! you get a list of users called via the API
 
 

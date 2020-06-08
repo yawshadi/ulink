@@ -2,7 +2,13 @@ $(document).ready(function () {
 			
     function detail(response){
         $('#noname').text(response.name);
-        $('#bio').text(response.company.name +'\n'+ response.email +"\n"+ response.phone );
+        $('#cm').text(response.company.name );
+        $('#em').text( response.email);
+        $('#ph').text( response.phone );
+
+        $('#st').text(response.address.street);
+        $('#su').text(response.address.suite);
+        $('#city').text(response.address.city);
     }
 
     $('.userid').click(function(){

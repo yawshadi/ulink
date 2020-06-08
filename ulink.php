@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: ulink
-Description: Create a custom url in wordpress which when visited asscess an API to list users  eg.yourdomain.com/{custom link}
+Description: Create a custom link in wordpress which when visited asscess an API to list users  eg.yourdomain.com/{custom link} | DEFAULT : yourdomain.com/ulink
 Plugin URI:  https://github.com/yawshadi/ulink/
 Author:      shadrach Amponsah
 Author URI: https://www.linkedin.com/in/shadrach-amponsah-6180b2a6/
