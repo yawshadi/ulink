@@ -32,6 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 require_once plugin_dir_path( __FILE__ ) . 'class.init.php';
 require_once plugin_dir_path( __FILE__ ) . 'class.ulink.php';
+require_once plugin_dir_path( __FILE__ ) . 'class.ulinkurl.php';
 
 add_filter('generate_rewrite_rules', array( 'Ulink', 'ulink_flush_rules' ));
 add_action('template_redirect', array( 'Ulink', 'ulink_redirect' ));
