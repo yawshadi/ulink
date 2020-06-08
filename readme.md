@@ -8,15 +8,14 @@
   - [license](#License)
 
 # Details
-- Plugin Name:       ulink
+- Plugin Name:       ulink wordpress plugin
 - Description:      Create a custom url in wordpress which when visited asscess an API to list users    eg.yourdomain.com/{custom link}
 - Plugin URI:        https://github.com/yawshadi/ulink/
 - Contributors:      (yawshadi)
 - Author:            Amponsah Shadrach
 - Version:           1.0
 - Stable tag:        1.0
-- Requires at least: 4.5
-- Tested up to:      4.8
+- Requires at least: 4.5 wordpress
 - Text Domain:       ulink
 - License:           GPL v2 or later
 - License URI:       https://www.gnu.org/licenses/gpl-2.0.txt
