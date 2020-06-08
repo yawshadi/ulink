@@ -13,7 +13,6 @@
 - Plugin URI:        https://github.com/yawshadi/ulink/
 - Contributors:      (yawshadi)
 - Author:            Amponsah Shadrach
-- Author URI:        https://www.linkedin.com/in/shadrach-amponsah-6180b2a6/
 - Version:           1.0
 - Stable tag:        1.0
 - Requires at least: 4.5
