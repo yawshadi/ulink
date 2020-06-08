@@ -1,27 +1,30 @@
 # ulink
 
 
-- [ulink plugin](#Details)
+- [ulink plugin](#ulink)
+  - [details](#Details)
   - [description](#Description)
   - [installation](#Installation)
   - [license](#License)
 
 # Details
-Plugin Name:       ulink
-Description:      Create a custom url in wordpress which when visited asscess an API to list users  eg.yourdomain.com/{custom link}
-Plugin URI:        https://github.com/yawshadi/ulink/
-Contributors:      (yawshadi)
-Author:            Amponsah Shadrach
-Author URI:        https://www.linkedin.com/in/shadrach-amponsah-6180b2a6/
-Version:           1.0
-Stable tag:        1.0
-Requires at least: 4.5
-Tested up to:      4.8
-Text Domain:       ulink
-License:           GPL v2 or later
-License URI:       https://www.gnu.org/licenses/gpl-2.0.txt
+- Plugin Name:       ulink
+- Description:      Create a custom url in wordpress which when visited asscess an API to list users    eg.yourdomain.com/{custom link}
+-Plugin URI:        https://github.com/yawshadi/ulink/
+-Contributors:      (yawshadi)
+-Author:            Amponsah Shadrach
+-Author URI:        https://www.linkedin.com/in/shadrach-amponsah-6180b2a6/
+-Version:           1.0
+-Stable tag:        1.0
+-Requires at least: 4.5
+-Tested up to:      4.8
+-Text Domain:       ulink
+-License:           GPL v2 or later
+-License URI:       https://www.gnu.org/licenses/gpl-2.0.txt
 
-ulink creates a custom url not path of wordpress core urls that can be used as pleased
+# ulink
+
+ulink creates a custom url not part of wordpress core urls that can be used as pleased
 
 
 # Description
